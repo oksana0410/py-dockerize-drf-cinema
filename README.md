@@ -4,17 +4,20 @@ API service for cinema management written on DRF
 ## Installing using GitHub
 ### Install PostgresSQL and create db
 - git clone https://github.com/oksana0410/py-dockerize-drf-cinema.git
-- cd cinema-API
-- python -m venv venv 
+- cd cinema-API 
+- `python -m venv venv` 
 - source venv/bin/activate
 - pip install -r requirements.txt
+- `python manage.py migrate`
+- `python manage.py runserver`
+
+### Add the correct environment variables to your .env
+
 - set POSTGRES_HOST=your_db_hostname
 - set POSTGRES_DB=your_db_name
 - set POSTGRES_USER=your_db_username
 - set POSTGRES_PASSWORD=your_db_user_password
 - set SECRET_KEY=your_secret_key
-- python manage.py migrate
-- python manage.py runserver
 
 ## Run with docker
 ### Docker should be installed
